@@ -9,7 +9,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10240,7 +10239,7 @@ body {
   width: 100%;
   height: 128px;
   color: var(--white);
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 2.4rem;
@@ -10302,7 +10301,7 @@ img {
   .desktop-navigation .navigation-item .navigation-link:link,
   .desktop-navigation .navigation-item .navigation-link:visited {
     color: var(--black-2);
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.6rem; }
 
@@ -10313,7 +10312,7 @@ img {
 *****************************************************/
 h1, .h1 {
   color: var(--black-1);
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 3.6rem !important;
   line-height: 4.2rem !important;
@@ -10332,14 +10331,14 @@ h2, .h2 {
   text-transform: none; }
 
 p {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
   line-height: 2.5rem; }
 
 .post-type-label {
   display: inline-block;
   color: var(--secondary);
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -10445,14 +10444,14 @@ h2 span, .h2 span {
     flex-direction: column;
     text-align: center; }
     .events-post-type-image .events-post-type-date .month {
-      font-family: Lato;
+      font-family: 'Lato';
       font-style: normal;
       font-weight: 500;
       font-size: 1.8rem;
       line-height: 2.2rem;
       text-transform: uppercase; }
     .events-post-type-image .events-post-type-date .day {
-      font-family: Lato;
+      font-family: 'Lato';
       font-style: normal;
       font-weight: bold;
       font-size: 4.1rem;
@@ -10504,4 +10503,4 @@ footer {
   footer .footer-content .social-media-links {
     flex: 0 0 25%; }
     footer .footer-content .social-media-links .social-media-icon:not(:first-child) {
-      margin-left: 3rem; }
+      margin-left: 2rem; }
