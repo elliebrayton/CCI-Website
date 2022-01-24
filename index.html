@@ -36,10 +36,318 @@
             </nav>
         </header>
         <!-- END HEADER -->
-        <main>
+        <!-- START MAIN -->
+        <main>    
+            <!--START SECTION -->        
+            <section class="section">
+                <div class="container">
+                    <!--NOTE: 
+                        I wasn't sure how in PHP you would code it out so the first post is in it's own row. I would of done it by having the firs row be a WP_Query and set the post count to 1, and then creating a 2nd query and set the post count to 2. I'm sure you'll have a better way haha. Just let me know if I need to make changes to the CSS. 
+                    -->
+                    <div class="row mt-2 mt-md-6">
+                        <!-- START WORDPRESS LOOP -->
+                        <div class="col-md-6 col-xl-8">
+                            <!-- PROGRAMS POST TYPE IMAGE -->
+                            <div class="programs-post-type-image">
+                                <a href="#"><img src="images/placeholder-image-one.png" alt="post-type-image"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <!-- PROGRAMS POST TYPE DETAILS -->
+                            <div class="programs-post-type-details">
+                                    <span class="post-type-label pt-4 pt-md-0"><a href="#">Program</a></span>
+                                    <h1 class="post-title-link"><a href="#">Winter Gift Exchange</a></h1>
+                                        <p>Spread holiday or winter cheer with your CCI family with our (non-denominational) Winter Gift Exchange program!</p>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-4 pt-md-6 pt-xl-8">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END WORDPRESS LOOP -->
+                    </div>
+                    <div class="row mb-8">
+                        <!-- START WORDPRESS LOOP -->
+                        <div class="col-md-4">
+                            <div class="programs-post-type-image mt-5">
+                                <a href="#"><img src="images/placeholder-image-two.png" alt="post-type-image"></a>
+                            </div>
+                                <!-- PROGRAMS POST TYPE DETAILS -->
+                                <div class="programs-post-type-details">
+                                    <span class="post-type-label pt-4 pb-0"><a href="#">Program</a></span>
+                                    <h2 class="post-title-link"><a href="#">International Adoptee Awarness Month</a></h2>
+                                        <p>2021 marks CCI’s third year recognizing National Adoption Awareness Month.</p>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-3">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="programs-post-type-image mt-5">
+                                <a href="#"><img src="images/placeholder-image-three.png" alt="post-type-image"></a>
+                            </div>
+                                <!-- PROGRAMS POST TYPE DETAILS -->
+                                <div class="programs-post-type-details">
+                                    <span class="post-type-label pt-4 pb-0"><a href="#">Program</a></span>
+                                        <h2 class="post-title-link"><a href="#">10 Year Anniversary </a></h2>
+                                    <p>CCI celebrates 10 years this year. </p>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-3">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="programs-post-type-image mt-5">
+                                <a href="#"><img src="images/placeholder-image-four.png" alt="post-type-image"></a>
+                            </div>
+                                <!-- PROGRAMS POST TYPE DETAILS -->
+                                <div class="programs-post-type-details">
+                                    <span class="post-type-label pt-4 pb-0"><a href="#">Program</a></span>
+                                    <h2 class="post-title-link"><a href="#"">Review Project</a></h2>
+                                        <p>2020 Marks CCI’s third year recognizing National Adoption Awareness Month.</p>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-3">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END WORDPRESS LOOP -->
+                    </div>
+                </div>
+            </section>
+            <!--END SECTION --> 
+            <!--START SECTION -->
+            <section class="section newsletter bg-base text-center">
+                <div class="container">
+                    <h2>Newsletter</h2>
+                        <p>Join CCI’s mailing list to keep updated on all of our latest programs, events, and activities. China’s Children International (CCI) is an international support, networking, and community organization created by and for Chinese adoptees.</p>
+                    <!-- START SIGN UP FORM-->
+                    <form class="form py-4">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text bg-primary text-white">Sign Up</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END SIGN UP FORM-->
+                </div>
+            </section>
+            <!--END SECTION -->            
+            <!--START SECTION -->
+            <section class="section">
+                <div class="container">
+                    <h2><span>Events</span></h2>
+                    <div class="row">
+                        <!-- START WORDPRESS LOOP -->
+                        <div class="col-md-4">
+                            <div class="events-post-type-image mt-5">
+                                <a href="#"><img src="images/placeholder-image-five.png" alt="post-type-image"></a>
+                                <!-- EVENTS POST TYPE DATE -->
+                                <div class="events-post-type-date">
+                                    <span class="month">Nov</span>
+                                    <span class="day">6</span>
+                                </div>
+                            </div>
+                                <!-- EVENTSPOST TYPE DETAILS -->
+                                <div class="events-post-type-details">
+                                    <span class="post-type-label pt-4 pb-0"><a href="#">Adoptee Chat</a></span>
+                                    <h2 class="post-title-link"><a href="#">Fun Chat</a></h2>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-3">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="events-post-type-image mt-5">
+                                <a href="#"><img src="images/placeholder-image-five.png" alt="post-type-image"></a>
+                                <!-- EVENTS POST TYPE DATE -->
+                                <div class="events-post-type-date">
+                                    <span class="month">Oct</span>
+                                    <span class="day">16</span>
+                                </div>
+                            </div>
+                                <!-- EVENTSPOST TYPE DETAILS -->
+                                <div class="events-post-type-details">
+                                    <span class="post-type-label pt-4 pb-0"><a href="#">Adoptee Chat</a></span>
+                                    <h2 class="post-title-link"><a href="#">What I wish my adoptive family know</a></h2>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-3">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="events-post-type-image mt-5">
+                                <a href="#"><img src="images/placeholder-image-five.png" alt="post-type-image"></a>
+                                <!-- EVENTS POST TYPE DATE -->
+                                <div class="events-post-type-date">
+                                    <span class="month">Oct</span>
+                                    <span class="day">16</span>
+                                </div>
+                            </div>
+                                <!-- EVENTSPOST TYPE DETAILS -->
+                                <div class="events-post-type-details">
+                                    <span class="post-type-label pt-4 pb-0"><a href="#">Adoptee Chat</a></span>
+                                    <h2 class="post-title-link"><a href="#">Cuture</a></h2>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-3">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- END WORDPRESS LOOP -->
+                    </div>
+                </div>
+            </section>
+            <!--END SECTION --> 
+            <!-- START SECTION -->
+            <section class="section bg-base">
+                <div class="container">
+                    <div class="row">
+                        <h2><span>Board Members</span></h2>
+                        <!-- START BOARD MEMBER PROFILE LINK-->
+                            <div class="board-members-wrapper my-6">
+                                <div class="board-members-image-avatar">
+                                    <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
+                                </div>
+                                <div class="board-member-details text-center d-flex flex-column align-self-center">
+                                    <span class="board-member-name"><a href="#">Board Member Name</a></span>
+                                    <span class="board-member-title text-secondary">Membership Title</span>
+                                </div>
+                            </div>
+                        <!-- END BOARD MEMBER PROFILE LINK-->
+                        <!-- START BOARD MEMBER PROFILE LINK-->
+                            <div class="board-members-wrapper my-6">
+                                <div class="board-members-image-avatar">
+                                    <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
+                                </div>
+                                <div class="board-member-details text-center d-flex flex-column align-self-center">
+                                    <span class="board-member-name"><a href="#">Board Member Name</a></span>
+                                    <span class="board-member-title text-secondary">Membership Title</span>
+                                </div>
+                            </div>
+                        <!-- END BOARD MEMBER PROFILE LINK-->
+                        <!-- START BOARD MEMBER PROFILE LINK-->
+                        <div class="board-members-wrapper my-6">
+                            <div class="board-members-image-avatar">
+                                <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
+                            </div>
+                            <div class="board-member-details text-center d-flex flex-column align-self-center">
+                                <span class="board-member-name"><a href="#">Board Member Name</a></span>
+                                <span class="board-member-title text-secondary">Membership Title</span>
+                            </div>
+                        </div>
+                    <!-- END BOARD MEMBER PROFILE LINK-->
+                    <!-- START BOARD MEMBER PROFILE LINK-->
+                    <div class="board-members-wrapper my-6">
+                        <div class="board-members-image-avatar">
+                            <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
+                        </div>
+                        <div class="board-member-details text-center d-flex flex-column align-self-center">
+                            <span class="board-member-name"><a href="#">Board Member Name</a></span>
+                            <span class="board-member-title text-secondary">Membership Title</span>
+                        </div>
+                    </div>
+                <!-- END BOARD MEMBER PROFILE LINK-->                    
+                <!-- START BOARD MEMBER PROFILE LINK-->
+                    <div class="board-members-wrapper my-6">
+                        <div class="board-members-image-avatar">
+                            <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
+                        </div>
+                        <div class="board-member-details text-center d-flex flex-column align-self-center">
+                            <span class="board-member-name"><a href="#">Board Member Name</a></span>
+                            <span class="board-member-title text-secondary">Membership Title</span>
+                        </div>
+                    </div>
+                <!-- END BOARD MEMBER PROFILE LINK-->
+                    </div>
+                </div>
+            </section>
+            <!-- END SECTION -->
+            <!-- START SECTION -->
+            <section>
+                <div class="container">
+                    <h2><span>Announcements</span></h2>
+                    <div class="large-btn-wrapper mt-6 mb-8 d-flex flex-column flex-md-row">
+                        <a href="#" class="large-btn bg-accent-2 mb-4 mb-md-0">Outside Announcements</a>
+                        <a href="#" class="large-btn bg-accent-1-darker">Inside Announcements</a>
+                    </div>
+                </div>
+            </section>
+            <!-- END SECTION -->
         </main>
+        <!-- END MAIN -->
         <!--START FOOTER -->
-        <footer>
+        <footer class="bg-base">
+            <div class="container">
+                <div class="footer-content d-flex flex-column flex-xl-row">
+                    <ul class="d-flex footer-links justify-content-center justify-content-xl-end">
+                        <li class="footer-item"><a href="#" class="footer-link">About</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">Contact Us</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">Privacy Notice </a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">FAQ</a></li>
+                    </ul>
+                    <span class="text-center">Copyright © CCI | All Rights Reserved</span>
+                    <ul class="d-flex social-media-links justify-content-center justify-content-xl-end mt-3 mt-xl-0">
+                        <li class="social-media-icon"><a href="#"><img src="images/instagram-icon.png" alt="instagram-icon"></a></li>
+                        <li class="social-media-icon"><a href="#"><img src="images/youtube-icon.png" alt="youtube-icon"></a></li>
+                        <li class="social-media-icon"><a href="#"><img src="images/mail-icon.png" alt="mail-icon"></a></li>
+                        <li class="social-media-icon"><a href="#"><img src="images/facebook-icon.png" alt="facebook-icon"></a></li>
+                        <li class="social-media-icon"><a href="#"><img src="images/twitter-icon.png" alt="twitter-icon"></a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
         <!-- END FOOTER -->
   </body>

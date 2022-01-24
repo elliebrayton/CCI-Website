@@ -17,11 +17,28 @@ $theme-colors: (
   'primary': #d0021b,
   'secondary': #025ebb,
   'accent': #ea9c5c,
+  'accent-1-darker': #da6a31,
   'base': #fafafa,
   'white': #ffffff,
   'black-1': #061b41,
   'black-2': #4a4a4a,
+  'accent-2': #9dd9af,
 ) !default;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5.5,
+  8: $spacer * 7,
+);
+
+$grid-gutter-width: 30px;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
@@ -42,6 +59,7 @@ $theme-colors: (
 // 4. Include any optional Bootstrap components as you like
 @import '../node_modules/bootstrap/scss/containers';
 @import '../node_modules/bootstrap/scss/grid';
+@import '../node_modules/bootstrap/scss/forms';
 
 // 5. Add additional custom code here
 
@@ -65,19 +83,20 @@ $theme-colors: (
 
 //Poppins
 
-@font-face {
-  font-family: 'Poppins';
-  src: url(../fonts/Poppins-Regular.ttf) format('truetype') font-weight-normal,
-    url(../fonts/Poppins-Italic.ttf) format('truetype') font-weight-italic,
-    url(../fonts/Poppins-Bold.ttf) format('truetype') font-weight-bold,
-    url(../fonts/Poppins-BoldItalic.ttf) format('truetype') font-italic
-      font-weight-bold;
-}
+// @font-face {
+//   font-family: 'Poppins';
+//   src: url(../fonts/Poppins-Regular.ttf) format('truetype') font-weight-normal,
+//     url(../fonts/Poppins-Italic.ttf) format('truetype') font-weight-italic,
+//     url(../fonts/Poppins-Bold.ttf) format('truetype') font-weight-bold,
+//     url(../fonts/Poppins-BoldItalic.ttf) format('truetype') font-italic
+//       font-weight-bold;
+// }
 
 //Lato
 //Note: Was having issues with Lato, just just imported using URL instead)
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 html {
   font-size: 62.5%; //1 rem = 10px
@@ -85,6 +104,7 @@ html {
 
 body {
   font-size: 1.6rem; //Font Size 16px
+  color: var(--black-1);
 }
 
 /*****************************************************
@@ -94,10 +114,12 @@ body {
 *****************************************************/
 
 :root {
-  --primary: #d0021b; // Write Description of  Use
+  --primary: #d0021b; // Write Description of Use
   --secondary: #025ebb; // Write Description of  Use
-  --accent: #ea9c5c; // Write Description of  Use
-  --base: #fafafa; // Write Description of  Use
+  --accent: #ea9c5c; // Write Description of Use
+  ---accent-1-darker: #da6a31 // Write Description of Use
+  --accent-2: #9dd9af; //Write Description of Use
+  --base: #fafafa; // Write Description of Use
 
   --white: #ffffff;
   --black-1: #061b41;
@@ -165,6 +187,35 @@ body {
   }
 }
 
+.large-btn-wrapper{
+  .large-btn:link,
+  .large-btn:visited {
+    display: inline-block;
+    width: 100%;
+    height: 128px;
+    color: var(--white);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-transform: capitalize;
+    &:not(:last-child){
+      margin-right: 3rem;
+    }
+
+    @include responsive(md-screen){
+      width: 50%;
+    }
+  }
+}
+
+
+
 /*****************************************************
 
                         BASE
@@ -189,8 +240,12 @@ ul {
 a:link,
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
+img {
+  width: 100%;
+}
 /*****************************************************
 
                         HEADER
@@ -206,14 +261,11 @@ a:visited {
   flex: 1;
 }
 
-.header {
-  border: 1px red solid;
-}
-
 //NAVIGATION
 
 .desktop-navigation {
   padding: 3rem 0 2rem;
+  text-transform: uppercase;
   .navigation-item {
     &:not(:last-child) {
       margin-right: 6rem;
@@ -221,7 +273,269 @@ a:visited {
     .navigation-link:link,
     .navigation-link:visited {
       color: var(--black-2);
-      font: normal 600 1.6rem/2.2rem 'Poppins';
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 1.6rem;
     }
   }
+}
+
+/*****************************************************
+
+                        MAIN
+
+*****************************************************/
+
+h1 {
+  color: var(--black-1);
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 3.6rem !important;
+  line-height: 4.2rem !important;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 3.64rem;
+  line-height: 5.4rem;
+  text-transform: uppercase;
+}
+
+.post-title-link {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  text-transform: none;
+}
+
+p {
+  font-family: 'Poppins';
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.post-type-label {
+  display: inline-block;
+  color: var(--secondary);
+  font-family: 'Poppins';
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 0 1rem;
+}
+
+/*****************************************************
+
+                  AUTHOR DETAILS
+
+*****************************************************/
+
+
+.post-author-wrapper {
+  .author-image-avatar {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 2rem;
+    img {
+      width: 100%;
+      border-radius: 100%;
+    }
+  }
+  .author-details {
+    .author-name {
+      font-family: 'Merriweather';
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+    .membership-title {
+      font-family: 'Lato';
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1.9rem;
+      letter-spacing: 0.53px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.programs-post-type-image:first-child {
+  img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+}
+
+.newsletter {
+  p {
+    font-family: 'Merriweather';
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+section {
+  margin: 1rem;
+  padding: 3rem 0;
+}
+
+/*****************************************************
+
+                        FORM
+
+*****************************************************/
+
+.form {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.input-group {
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  .form-control {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+  .input-group-append {
+    .input-group-text {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      text-transform: uppercase;
+      border-radius: 0 4px 4px 0;
+      border: 1px solid var(--primary);
+    }
+  }
+}
+
+/*****************************************************
+
+                  EVENTS POST TYPE
+
+*****************************************************/
+
+h2 {
+  span {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      background: var(--accent);
+      width: 56px;
+      height: 5px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.events-post-type-image {
+  position: relative;
+  .events-post-type-date {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    background: white;
+    height: 85px;
+    width: 75px;
+    font-family: 'Lato';
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .month {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      text-transform: uppercase;
+    }
+    .day {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 4.1rem;
+      line-height: 82%;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.board-members-wrapper {
+  width: 200px;
+  height: 260px;
+  &:not(:last-child) {
+    margin-right: 3rem;
+  }
+  .board-members-image-avatar {
+    width: 16.6rem;
+    height: 16.6rem;
+    margin: auto;
+    img {
+      width: 100%;
+      border-radius: 100%;
+      margin: 0 auto;
+    }
+  }
+  .board-member-details {
+    margin-top: 2rem;
+    .board-member-name {
+      font-family: 'Merriweather';
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+    .board-member-title {
+      font-family: 'Lato';
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1.9rem;
+      letter-spacing: 0.53px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+/*****************************************************
+
+                      FOOTER 
+
+*****************************************************/
+
+footer{
+  padding: 5rem;
+.footer-content{
+  .footer-links{
+    flex: 0 0 33%;
+    .footer-item{
+      &:not(:last-child){
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  span{
+    display: inline-block;
+    flex: 1;
+  }
+
+  .social-media-links{
+    flex: 0 0 25%;
+    .social-media-icon{
+      &:not(:first-child){
+        margin-left: 3rem;
+      }
+    }
+  }
+}
 }
