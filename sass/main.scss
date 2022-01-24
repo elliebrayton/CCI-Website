@@ -9,6 +9,20 @@
 
 // Include any default variable overrides here (though functions won't be available)
 
+$container-max-widths: (
+  xxl: 1440px,
+) !default;
+
+$theme-colors: (
+  'primary': #d0021b,
+  'secondary': #025ebb,
+  'accent': #ea9c5c,
+  'base': #fafafa,
+  'white': #ffffff,
+  'black-1': #061b41,
+  'black-2': #4a4a4a,
+) !default;
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 // Then add additional custom code here
@@ -64,3 +78,150 @@
 //Note: Was having issues with Lato, just just imported using URL instead)
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  font-size: 62.5%; //1 rem = 10px
+}
+
+body {
+  font-size: 1.6rem; //Font Size 16px
+}
+
+/*****************************************************
+
+                      THEME COLORS
+
+*****************************************************/
+
+:root {
+  --primary: #d0021b; // Write Description of  Use
+  --secondary: #025ebb; // Write Description of  Use
+  --accent: #ea9c5c; // Write Description of  Use
+  --base: #fafafa; // Write Description of  Use
+
+  --white: #ffffff;
+  --black-1: #061b41;
+  --black-2: #4a4a4a;
+}
+
+/*****************************************************
+
+                    MEDIA QUERIES 
+
+*****************************************************/
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm-screen {
+    @media (min-width: 539px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md-screen {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg-screen {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl-screen {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl-screen {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+/*****************************************************
+
+                      BUTTONS
+
+*****************************************************/
+
+.cta-btn:link,
+.cta-btn:visited {
+  //Call To Action Button - Located in Header
+  display: inline-block;
+  width: 121px;
+  padding: 1rem 0;
+  border: 1px solid red;
+  border-radius: 4px;
+  font: normal 500 1.4rem/2.2rem 'Lato';
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+/*****************************************************
+
+                        BASE
+
+*****************************************************/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 3% !important;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/*****************************************************
+
+                        HEADER
+
+*****************************************************/
+.cci-logo-wrapper {
+  .cci-logo {
+    width: 100%;
+  }
+}
+
+.cci-btn-wrapper {
+  flex: 1;
+}
+
+.header {
+  border: 1px red solid;
+}
+
+//NAVIGATION
+
+.desktop-navigation {
+  padding: 3rem 0 2rem;
+  .navigation-item {
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+    .navigation-link:link,
+    .navigation-link:visited {
+      color: var(--black-2);
+      font: normal 600 1.6rem/2.2rem 'Poppins';
+    }
+  }
+}
