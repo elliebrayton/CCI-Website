@@ -306,7 +306,7 @@ p {
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 0 0 1rem;
+  padding: 1rem 0;
 }
 
 /*****************************************************
@@ -522,4 +522,98 @@ footer{
     }
   }
 }
+}
+
+
+// .programs-post-type-2:first-child{
+//   display: flex; 
+//   a{
+//     display: flex;
+//     max-width: 66% !important;
+//     img{
+//       width: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   .programs-post-type-details{
+//     flex: 1;
+//   }
+// }
+
+// .programs-post-type-2{
+//   &:not(:first-child){
+//     width: 33%;
+//     &:not(:last-child){
+//       margin-right: 30px;
+//     }
+//   }
+// }
+
+@mixin clearfix{
+  &::after{
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+}
+
+
+.content-row{
+  @include clearfix;
+  [class^="content-col"]{
+        float: left;
+        &:not(:last-child){
+            margin-right: 0;
+            @include responsive(md-screen){
+                margin-right: 3rem;
+          }
+      }
+  }
+}
+
+.content-col{
+  //The width is the entire width of the row (100%) minus the gutter-margin-x divided by 2
+  &:not(:first-child){
+
+    @include responsive(md-screen){
+      width: calc((100% - 2 * 3rem) / 3);
+    }
+  }
+
+  margin-bottom: 3rem;
+}
+
+
+.content-col:first-child{
+  display: flex;
+  flex-direction: column;
+
+  @include responsive(lg-screen){
+    flex-direction: row;
+    .post-type-label{
+      padding: 0 0 1rem;
+    }
+  }
+  .programs-post-type-image{
+    width: 100%;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+    @include responsive(lg-screen){
+      flex-direction: row;
+      width: 50%;
+    }
+    @include responsive(xl-screen){
+      width: 66%;
+    }
+  }
+  .programs-post-type-details-2{
+    @include responsive(lg-screen){
+      flex: 1;
+      margin-left: 3rem;
+    }
+  }
 }

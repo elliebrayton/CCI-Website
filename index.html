@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <title>CCI Home Page - IN PRODUCTION</title>
@@ -42,21 +43,81 @@
             <!--START SECTION -->        
             <section class="section">
                 <div class="container">
-                    <!--NOTE: 
-                        I wasn't sure how in PHP you would code it out so the first post is in it's own row. I would of done it by having the firs row be a WP_Query and set the post count to 1, and then creating a 2nd query and set the post count to 2. I'm sure you'll have a better way haha. Just let me know if I need to make changes to the CSS. 
-                    -->
-                    <div class="row mt-2 mt-md-6">
-                        <!-- START WORDPRESS LOOP -->
-                        <div class="col-md-6 col-xl-8">
+                    <div class="content-row">
+                        <!-- START WORDPRESS LOOP-->
+                        <div class="content-col">
                             <!-- PROGRAMS POST TYPE IMAGE -->
                             <div class="programs-post-type-image">
                                 <a href="#"><img src="images/placeholder-image-one.png" alt="post-type-image"></a>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-xl-4">
                             <!-- PROGRAMS POST TYPE DETAILS -->
-                            <div class="programs-post-type-details">
-                                    <span class="post-type-label pt-4 pt-md-0"><a href="#">Program</a></span>
+                            <div class="programs-post-type-details-2">
+                                    <span class="post-type-label"><a href="#">Program</a></span>
+                                    <h1 class="post-title-link"><a href="#">Winter Gift Exchange</a></h1>
+                                        <p>Spread holiday or winter cheer with your CCI family with our (non-denominational) Winter Gift Exchange program!</p>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-4 pt-md-6 pt-xl-8">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="content-col">
+                            <!-- PROGRAMS POST TYPE IMAGE -->
+                            <div class="programs-post-type-image">
+                                <a href="#"><img src="images/placeholder-image-two.png" alt="post-type-image"></a>
+                            </div>
+                            <!-- PROGRAMS POST TYPE DETAILS -->
+                            <div class="programs-post-type-details-2">
+                                    <span class="post-type-label"><a href="#">Program</a></span>
+                                    <h1 class="post-title-link"><a href="#">Winter Gift Exchange</a></h1>
+                                        <p>Spread holiday or winter cheer with your CCI family with our (non-denominational) Winter Gift Exchange program!</p>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-4 pt-md-6 pt-xl-8">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-col">
+                            <!-- PROGRAMS POST TYPE IMAGE -->
+                            <div class="programs-post-type-image">
+                                <a href="#"><img src="images/placeholder-image-three.png" alt="post-type-image"></a>
+                            </div>
+                            <!-- PROGRAMS POST TYPE DETAILS -->
+                            <div class="programs-post-type-details-2">
+                                    <span class="post-type-label"><a href="#">Program</a></span>
+                                    <h1 class="post-title-link"><a href="#">Winter Gift Exchange</a></h1>
+                                        <p>Spread holiday or winter cheer with your CCI family with our (non-denominational) Winter Gift Exchange program!</p>
+                                <!-- POST TYPE AUTHOR DETAILS -->
+                                <div class="post-author-wrapper d-flex pt-4 pt-md-6 pt-xl-8">
+                                    <div class="author-image-avatar">
+                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
+                                    </div>
+                                    <div class="author-details d-flex flex-column align-self-center">
+                                        <span class="author-name"><a href="#">Author Name</a></span>
+                                        <span class="membership-title">Membership Title</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-col">
+                            <!-- PROGRAMS POST TYPE IMAGE -->
+                            <div class="programs-post-type-image">
+                                <a href="#"><img src="images/placeholder-image-four.png" alt="post-type-image"></a>
+                            </div>
+                            <!-- PROGRAMS POST TYPE DETAILS -->
+                            <div class="programs-post-type-details-2">
+                                    <span class="post-type-label"><a href="#">Program</a></span>
                                     <h1 class="post-title-link"><a href="#">Winter Gift Exchange</a></h1>
                                         <p>Spread holiday or winter cheer with your CCI family with our (non-denominational) Winter Gift Exchange program!</p>
                                 <!-- POST TYPE AUTHOR DETAILS -->
@@ -73,74 +134,6 @@
                         </div>
                         <!-- END WORDPRESS LOOP -->
                     </div>
-                    <div class="row mb-8">
-                        <!-- START WORDPRESS LOOP -->
-                        <div class="col-md-4">
-                            <div class="programs-post-type-image mt-5">
-                                <a href="#"><img src="images/placeholder-image-two.png" alt="post-type-image"></a>
-                            </div>
-                                <!-- PROGRAMS POST TYPE DETAILS -->
-                                <div class="programs-post-type-details">
-                                    <span class="post-type-label pt-4 pb-0"><a href="#">Program</a></span>
-                                    <h2 class="post-title-link"><a href="#">International Adoptee Awarness Month</a></h2>
-                                        <p>2021 marks CCI’s third year recognizing National Adoption Awareness Month.</p>
-                                <!-- POST TYPE AUTHOR DETAILS -->
-                                <div class="post-author-wrapper d-flex pt-3">
-                                    <div class="author-image-avatar">
-                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
-                                    </div>
-                                    <div class="author-details d-flex flex-column align-self-center">
-                                        <span class="author-name"><a href="#">Author Name</a></span>
-                                        <span class="membership-title">Membership Title</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="programs-post-type-image mt-5">
-                                <a href="#"><img src="images/placeholder-image-three.png" alt="post-type-image"></a>
-                            </div>
-                                <!-- PROGRAMS POST TYPE DETAILS -->
-                                <div class="programs-post-type-details">
-                                    <span class="post-type-label pt-4 pb-0"><a href="#">Program</a></span>
-                                        <h2 class="post-title-link"><a href="#">10 Year Anniversary </a></h2>
-                                    <p>CCI celebrates 10 years this year. </p>
-                                <!-- POST TYPE AUTHOR DETAILS -->
-                                <div class="post-author-wrapper d-flex pt-3">
-                                    <div class="author-image-avatar">
-                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
-                                    </div>
-                                    <div class="author-details d-flex flex-column align-self-center">
-                                        <span class="author-name"><a href="#">Author Name</a></span>
-                                        <span class="membership-title">Membership Title</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="programs-post-type-image mt-5">
-                                <a href="#"><img src="images/placeholder-image-four.png" alt="post-type-image"></a>
-                            </div>
-                                <!-- PROGRAMS POST TYPE DETAILS -->
-                                <div class="programs-post-type-details">
-                                    <span class="post-type-label pt-4 pb-0"><a href="#">Program</a></span>
-                                    <h2 class="post-title-link"><a href="#"">Review Project</a></h2>
-                                        <p>2020 Marks CCI’s third year recognizing National Adoption Awareness Month.</p>
-                                <!-- POST TYPE AUTHOR DETAILS -->
-                                <div class="post-author-wrapper d-flex pt-3">
-                                    <div class="author-image-avatar">
-                                        <a href="#"><img src="images/fall-back-profile-image.jpg" alt="author-profile-image-avatar"></a>
-                                    </div>
-                                    <div class="author-details d-flex flex-column align-self-center">
-                                        <span class="author-name"><a href="#">Author Name</a></span>
-                                        <span class="membership-title">Membership Title</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END WORDPRESS LOOP -->
-                    </div>
-                </div>
             </section>
             <!--END SECTION --> 
             <!--START SECTION -->
@@ -182,7 +175,7 @@
                             </div>
                                 <!-- EVENTSPOST TYPE DETAILS -->
                                 <div class="events-post-type-details">
-                                    <span class="post-type-label pt-4 pb-0"><a href="#">Adoptee Chat</a></span>
+                                    <span class="post-type-label"><a href="#">Adoptee Chat</a></span>
                                     <h2 class="post-title-link"><a href="#">Fun Chat</a></h2>
                                 <!-- POST TYPE AUTHOR DETAILS -->
                                 <div class="post-author-wrapper d-flex pt-3">
@@ -198,7 +191,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="events-post-type-image mt-5">
-                                <a href="#"><img src="images/placeholder-image-five.png" alt="post-type-image"></a>
+                                <a href="#"><img src="images/placeholder-image-six.png" alt="post-type-image"></a>
                                 <!-- EVENTS POST TYPE DATE -->
                                 <div class="events-post-type-date">
                                     <span class="month">Oct</span>
@@ -207,7 +200,7 @@
                             </div>
                                 <!-- EVENTSPOST TYPE DETAILS -->
                                 <div class="events-post-type-details">
-                                    <span class="post-type-label pt-4 pb-0"><a href="#">Adoptee Chat</a></span>
+                                    <span class="post-type-label"><a href="#">Adoptee Chat</a></span>
                                     <h2 class="post-title-link"><a href="#">What I wish my adoptive family know</a></h2>
                                 <!-- POST TYPE AUTHOR DETAILS -->
                                 <div class="post-author-wrapper d-flex pt-3">
@@ -223,7 +216,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="events-post-type-image mt-5">
-                                <a href="#"><img src="images/placeholder-image-five.png" alt="post-type-image"></a>
+                                <a href="#"><img src="images/placeholder-image-seven.png" alt="post-type-image"></a>
                                 <!-- EVENTS POST TYPE DATE -->
                                 <div class="events-post-type-date">
                                     <span class="month">Oct</span>
@@ -232,7 +225,7 @@
                             </div>
                                 <!-- EVENTSPOST TYPE DETAILS -->
                                 <div class="events-post-type-details">
-                                    <span class="post-type-label pt-4 pb-0"><a href="#">Adoptee Chat</a></span>
+                                    <span class="post-type-label"><a href="#">Adoptee Chat</a></span>
                                     <h2 class="post-title-link"><a href="#">Cuture</a></h2>
                                 <!-- POST TYPE AUTHOR DETAILS -->
                                 <div class="post-author-wrapper d-flex pt-3">
@@ -269,7 +262,7 @@
                             </div>
                         <!-- END BOARD MEMBER PROFILE LINK-->
                         <!-- START BOARD MEMBER PROFILE LINK-->
-                            <div class="board-members-wrapper my-6">
+                            <div class="board-members-wrapper my-6 d-none d-md-block">
                                 <div class="board-members-image-avatar">
                                     <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
                                 </div>
@@ -280,7 +273,7 @@
                             </div>
                         <!-- END BOARD MEMBER PROFILE LINK-->
                         <!-- START BOARD MEMBER PROFILE LINK-->
-                        <div class="board-members-wrapper my-6">
+                        <div class="board-members-wrapper my-6 d-none d-md-block">
                             <div class="board-members-image-avatar">
                                 <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
                             </div>
@@ -291,7 +284,7 @@
                         </div>
                     <!-- END BOARD MEMBER PROFILE LINK-->
                     <!-- START BOARD MEMBER PROFILE LINK-->
-                    <div class="board-members-wrapper my-6">
+                    <div class="board-members-wrapper my-6 d-none d-md-block">
                         <div class="board-members-image-avatar">
                             <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
                         </div>
@@ -302,7 +295,7 @@
                     </div>
                 <!-- END BOARD MEMBER PROFILE LINK-->                    
                 <!-- START BOARD MEMBER PROFILE LINK-->
-                    <div class="board-members-wrapper my-6">
+                    <div class="board-members-wrapper my-6 d-none d-md-block">
                         <div class="board-members-image-avatar">
                             <a href="#"><img src="images/fall-back-profile-image.jpg" alt="board-members-image-avatar"></a>
                         </div>
